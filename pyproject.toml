@@ -10,6 +10,7 @@ python = "^3.10"
 streamlit = "^1.36.0"
 loguru = "^0.7.2"
 ocrmypdf = "^16.4.0"
+pytesseract = "^0.3.10"
 
 
 [build-system]

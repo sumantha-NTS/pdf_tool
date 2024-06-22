@@ -4,6 +4,11 @@ import sys
 from streamlit import runtime
 from src.config import config
 
+import pytesseract
+
+# Set the path for Tesseract
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+
 
 st.set_page_config(
     page_title="PDF Tool",
