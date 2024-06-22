@@ -1,2 +1,4 @@
 tesseract-ocr
+libgl1-mesa-glx 
+poppler-utils
 libgs9
