@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pdf-tool"
+version = "0.1.0"
+description = "One stop solution for PDF processing"
+authors = ["Sumantha NTS"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.36.0"
+loguru = "^0.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
