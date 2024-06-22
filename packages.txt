@@ -1,2 +1,2 @@
 tesseract-ocr
-libgs.so.9
+libgs9
