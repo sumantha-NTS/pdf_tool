@@ -17,7 +17,7 @@ def main():
         """
     # 📚 PDF Tool
 
-    #### Welcome to the PDF Tool. Your one-stop solution for PDF processing, conversion, and editing.
+    #### Welcome to the PDF Tool. Your one-stop solution for PDF processing, conversion, and information extraction.
     """
     )
 
