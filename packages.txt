@@ -1,4 +1,5 @@
 tesseract-ocr
 libgl1-mesa-glx 
 poppler-utils
-libgs9=9.55.0~dfsg1-0ubuntu5
+libgs9
+update
