@@ -1,4 +1,4 @@
 tesseract-ocr
 libgl1-mesa-glx 
 poppler-utils
-ghostscript
+ghostscript-x
