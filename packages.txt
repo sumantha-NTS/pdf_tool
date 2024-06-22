@@ -1,4 +1,4 @@
 tesseract-ocr
 libgl1-mesa-glx 
 poppler-utils
-ghostscript=9.55.0~dfsg1-0ubuntu5.7
+libgs10
