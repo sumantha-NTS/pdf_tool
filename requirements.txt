@@ -3,3 +3,4 @@ loguru==0.7.2
 ocrmypdf==16.4.0
 pytesseract==0.3.10
 pypdf2==3.0.1
+streamlit-pdf-viewer==0.0.14

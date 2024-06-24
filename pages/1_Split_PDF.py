@@ -3,6 +3,7 @@ from src.services import pdf_services
 from io import BytesIO
 from PyPDF2 import PdfReader
 import base64
+from streamlit_pdf_viewer import pdf_viewer
 
 st.set_page_config(page_title="Split PDF", page_icon=":book:", layout="wide")
 
@@ -28,15 +29,20 @@ if submit:
 
     st.subheader("Results")
 
-    tabs = st.tabs([f"Page {i}" for i in split_pages])
+    tabs = st.tabs(["Download"] + [f"Page {i}" for i in split_pages])
 
     for i, page in enumerate(result):
-        if page[0] == "error":
-            st.error(page[1])
-            continue
+        with tabs[i + 1]:
+            if page[0] == "error":
+                st.error(page[1])
+                continue
+            tabs[0].download_button(
+                label=file.name.split(".")[0] + "_" + split_pages[i],
+                data=page[1],
+                file_name=file.name.split(".")[0] + "_" + split_pages[i] + ".pdf",
+            )
+            pdf_base64 = base64.b64encode(page[1]).decode("utf-8")
+            pdf_display = f'<iframe src="data:application/pdf;base64,{pdf_base64}" width="1400" height="700" type="application/pdf"></iframe>'
 
-        pdf_base64 = base64.b64encode(page[1]).decode("utf-8")
-        pdf_display = f'<iframe src="data:application/pdf;base64,{pdf_base64}" width="1400" height="700" type="application/pdf"></iframe>'
-
-        # Display file in PDF format
-        tabs[i].markdown(pdf_display, unsafe_allow_html=True)
+            # Display file in PDF format
+            st.markdown(pdf_display, unsafe_allow_html=True)
